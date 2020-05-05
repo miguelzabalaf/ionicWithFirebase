@@ -14,11 +14,12 @@ export class Tab1Page implements OnInit {
   constructor( private db: AngularFireDatabase ) {}
 
   ngOnInit() {
-    this.itemRef = this.db.object('test');
+    this.itemRef = this.db.object('usuarios');
     this.itemRef.snapshotChanges().subscribe(action => {
     console.log(action.type);
     console.log(action.key)
     console.log(action.payload.val())
+    return this.itemRef
     });
   }
 }
