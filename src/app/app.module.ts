@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -12,7 +13,6 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
