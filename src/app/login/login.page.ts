@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  loginForm: FormGroup;
+
+  constructor( private auth: AngularFireAuth,
+               private fb: FormBuilder ) { }
 
   ngOnInit() {
+    this.loginForm = this.fb.group({
+      email:['', Validators.required],
+      password:['', Validators.required]
+    })
+  }
+
+  login() {
+    console.log(this.loginForm.value)
+  }
+  register() {
+
   }
 
 }
