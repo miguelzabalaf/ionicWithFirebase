@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-back-button defaultHref="/login"></ion-back-button>
+  <form [formGroup]=''>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <span class='ion-text-end'>Nombre</span>
+      <ion-item>
+        <ion-input formControlName='name' placeholder='Nombre con apellidos'></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row class='ion-justify-content-center ion-align-items center'></ion-row>
+    <span class="ion-text-end">Email</span>
+    <ion-item>
+      <ion-input formControlName='email' placeholder='Correo'></ion-input>
+    </ion-item>
+  </form>
+</ion-content>
